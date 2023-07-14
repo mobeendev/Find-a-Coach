@@ -1,3 +1,3 @@
 <template>
-    About
+    coach reg
 </template>

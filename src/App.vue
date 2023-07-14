@@ -1,20 +1,30 @@
 <template>
-    <h2>{{ title }}</h2>
-    <router-link to="/">Go to Home</router-link> 
-    <router-link to="/about">Go to About</router-link>
-<br>
- <router-view></router-view>
-
-
+    <the-header></the-header>
+    <router-view></router-view>
 </template>
-
-
-<script>
-export default {
-    data() {
-        return {
-                title: "Find a coach App"      
-        }
-    },
+  
+  <script>
+  import TheHeader from './components/layout/TheHeader.vue';
+  
+  export default {
+  components: {
+    TheHeader
+  }  
 }
-</script>
+  </script>
+  
+  <style>
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  </style>
