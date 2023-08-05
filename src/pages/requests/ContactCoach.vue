@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="submitForm">
       <div class="form-control">
-        <label for="email">Your E-Mail  --->{{ $route.params.id }}</label>
+        <label for="email">Your E-Mail</label>
         <input type="email" id="email" v-model.trim="email" />
       </div>
       <div class="form-control">
@@ -41,7 +41,6 @@
           coachId: this.$route.params.id
         });
         this.$router.replace('/coaches');
-  
       },
     },
   };
