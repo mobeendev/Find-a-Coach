@@ -31,9 +31,9 @@ export default {
     const url = process.env.VUE_APP_DB_URL;
     const response = await fetch(`${url}/coaches.json`);
     const responseData = await response.json();
-
     if (!response.ok) {
-      // ...
+      const error = new Error(responseData.message || 'Failed to fetch!');
+      throw error;
     }
 
     const coaches = [];
